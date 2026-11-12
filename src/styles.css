@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply bg-neutral-50 text-gray-900 font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+}
+
+/* Scrollbar fina para áreas de preview/rolagem */
+@utility scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gray-300) transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-gray-300);
+    border-radius: 999px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
